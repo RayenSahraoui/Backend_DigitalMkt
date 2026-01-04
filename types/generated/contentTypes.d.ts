@@ -620,7 +620,31 @@ export interface ApiClickNumberClickNumber extends Struct.CollectionTypeSchema {
       'api::click-number.click-number'
     > &
       Schema.Attribute.Private;
-    Numbers: Schema.Attribute.BigInteger;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiClickClick extends Struct.SingleTypeSchema {
+  collectionName: 'clicks';
+  info: {
+    displayName: 'Click';
+    pluralName: 'clicks';
+    singularName: 'click';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::click.click'> &
+      Schema.Attribute.Private;
+    Number: Schema.Attribute.BigInteger;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -1221,6 +1245,7 @@ declare module '@strapi/strapi' {
       'api::author.author': ApiAuthorAuthor;
       'api::category.category': ApiCategoryCategory;
       'api::click-number.click-number': ApiClickNumberClickNumber;
+      'api::click.click': ApiClickClick;
       'api::client.client': ApiClientClient;
       'api::global.global': ApiGlobalGlobal;
       'plugin::content-releases.release': PluginContentReleasesRelease;

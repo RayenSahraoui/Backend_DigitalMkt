@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "clicks",
+  "info": {
+    "singularName": "click",
+    "pluralName": "clicks",
+    "displayName": "Click"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Number": {
+      "type": "biginteger"
+    }
+  }
+}

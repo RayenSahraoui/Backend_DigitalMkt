@@ -10,9 +10,5 @@
     "draftAndPublish": true
   },
   "pluginOptions": {},
-  "attributes": {
-    "Numbers": {
-      "type": "biginteger"
-    }
-  }
+  "attributes": {}
 }

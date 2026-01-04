@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "click_numbers",
+  "info": {
+    "singularName": "click-number",
+    "pluralName": "click-numbers",
+    "displayName": "Click_Number"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Numbers": {
+      "type": "biginteger"
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "clients",
+  "info": {
+    "singularName": "client",
+    "pluralName": "clients",
+    "displayName": "Client"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Nom": {
+      "type": "string"
+    },
+    "Prenom": {
+      "type": "string"
+    },
+    "mail": {
+      "type": "email"
+    },
+    "Phone": {
+      "type": "string"
+    },
+    "Profession": {
+      "type": "string"
+    },
+    "Organization": {
+      "type": "string"
+    },
+    "Comment": {
+      "type": "enumeration",
+      "enum": [
+        "Facebook",
+        "Instagram",
+        "Twitter/X",
+        "Email/Newsletter",
+        "Site web/Blog",
+        "Par un ami/collègue",
+        "Autre"
+      ]
+    },
+    "More": {
+      "type": "text"
+    }
+  }
+}

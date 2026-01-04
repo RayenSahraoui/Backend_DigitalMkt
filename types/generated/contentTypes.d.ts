@@ -635,7 +635,7 @@ export interface ApiClickClick extends Struct.SingleTypeSchema {
     singularName: 'click';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     createdAt: Schema.Attribute.DateTime;
